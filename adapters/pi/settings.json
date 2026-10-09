@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "npm:pi-web-ui",
+    "npm:pi-goal-x"
+  ],
+  "skills": [
+    "-{{HOME}}/.pi/agent/skills/profile-config/SKILL.md"
+  ]
+}

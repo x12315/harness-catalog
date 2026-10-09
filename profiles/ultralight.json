@@ -1,0 +1,64 @@
+{
+  "$schema": "./profile.schema.json",
+  "label": "超轻harness",
+  "description": "以 GPT-6 Astra 和最少过程约束处理空间设计、疑难排查与全局规划",
+  "instructions": [
+    {
+      "id": "profile/strategic",
+      "detail": "standard"
+    },
+    {
+      "id": "profile/implementation",
+      "detail": "brief"
+    },
+    {
+      "id": "profile/concise",
+      "detail": "brief"
+    }
+  ],
+  "skills": [
+    "agent-browser",
+    "agent-harness",
+    "computer-use",
+    "frontend-design",
+    "grilling",
+    "macos-design",
+    "ponytail",
+    "self-explanatory-code",
+    "session-handoff"
+  ],
+  "adapters": {
+    "pi": {
+      "tools": [
+        "read",
+        "bash",
+        "edit",
+        "write",
+        "grep",
+        "find",
+        "ls",
+        "subagent"
+      ],
+      "extensions": [
+        "bookmark",
+        "handoff",
+        "harness-manager",
+        "subagent"
+      ],
+      "mcps": [],
+      "model": {
+        "provider": "openai-codex",
+        "id": "gpt-6-astra",
+        "thinking": "high"
+      }
+    },
+    "codex": {
+      "sandbox": "workspace-write",
+      "approval": "on-request",
+      "model": {
+        "id": "gpt-6-astra",
+        "thinking": "high"
+      }
+    }
+  }
+}

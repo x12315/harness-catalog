@@ -1,0 +1,65 @@
+{
+  "$schema": "./profile.schema.json",
+  "label": "中型harness",
+  "description": "面向 GPT-5.6 Terra 的调试、中量编码、建议问答与知识索引",
+  "instructions": [
+    {
+      "id": "profile/implementation",
+      "detail": "standard"
+    },
+    {
+      "id": "profile/model-standard",
+      "detail": "standard"
+    },
+    {
+      "id": "profile/concise",
+      "detail": "standard"
+    }
+  ],
+  "skills": [
+    "agent-browser",
+    "amap-house-hunting",
+    "documentation-writer",
+    "git-commit",
+    "make-repo-contribution",
+    "ponytail",
+    "self-explanatory-code",
+    "lark-base",
+    "lark-doc",
+    "lark-drive",
+    "lark-sheets",
+    "lark-wiki"
+  ],
+  "adapters": {
+    "pi": {
+      "tools": [
+        "read",
+        "bash",
+        "edit",
+        "write",
+        "grep",
+        "find",
+        "ls"
+      ],
+      "extensions": [
+        "bookmark",
+        "handoff",
+        "harness-manager"
+      ],
+      "mcps": [],
+      "model": {
+        "provider": "openai-codex",
+        "id": "gpt-5.6-terra",
+        "thinking": "medium"
+      }
+    },
+    "codex": {
+      "sandbox": "workspace-write",
+      "approval": "on-request",
+      "model": {
+        "id": "gpt-5.6-terra",
+        "thinking": "medium"
+      }
+    }
+  }
+}

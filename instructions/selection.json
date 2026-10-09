@@ -1,0 +1,13 @@
+{
+  "mandatory": [
+    { "id": "mandatory/00-safety", "detail": "standard" }
+  ],
+  "repository": [
+    { "id": "repository/00-purpose", "detail": "brief" },
+    { "id": "repository/10-ownership", "detail": "standard" },
+    { "id": "repository/20-rules", "detail": "standard" },
+    { "id": "repository/30-routing", "detail": "brief" },
+    { "id": "repository/40-validation", "detail": "standard" },
+    { "id": "repository/50-conventions", "detail": "standard" }
+  ]
+}
