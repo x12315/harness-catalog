@@ -2,26 +2,43 @@
   "$schema": "./profile.schema.json",
   "label": "超轻harness",
   "description": "以 GPT-6 Astra 和最少过程约束处理空间设计、疑难排查与全局规划",
-  "instructions": [
-    {
-      "id": "profile/strategic",
-      "detail": "standard"
-    },
-    {
-      "id": "profile/implementation",
-      "detail": "brief"
-    },
-    {
-      "id": "profile/concise",
-      "detail": "brief"
-    }
-  ],
+  "instructions": [],
   "skills": [
     "agent-browser",
     "agent-harness",
     "computer-use",
+    "documentation-writer",
     "frontend-design",
     "grilling",
+    "lark-approval",
+    "lark-apps",
+    "lark-attendance",
+    "lark-base",
+    "lark-calendar",
+    "lark-contact",
+    "lark-doc",
+    "lark-drive",
+    "lark-event",
+    "lark-im",
+    "lark-mail",
+    "lark-markdown",
+    "lark-meeting",
+    "lark-minutes",
+    "lark-note",
+    "lark-okr",
+    "lark-openapi-explorer",
+    "lark-shared",
+    "lark-sheets",
+    "lark-skill-maker",
+    "lark-slides",
+    "lark-task",
+    "lark-vc",
+    "lark-vc-agent",
+    "lark-whiteboard",
+    "lark-wiki",
+    "lark-workflow-meeting-summary",
+    "lark-workflow-standup-report",
+    "loop-engineering",
     "macos-design",
     "ponytail",
     "self-explanatory-code",
@@ -43,7 +60,12 @@
         "bookmark",
         "handoff",
         "harness-manager",
-        "subagent"
+        "iterm-bell",
+        "@calesennett/pi-codex-fast",
+        "pi-session-window",
+        "subagent",
+        "pi-observer",
+        "pi-web-ui"
       ],
       "mcps": [],
       "model": {

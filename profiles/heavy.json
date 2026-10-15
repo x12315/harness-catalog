@@ -18,6 +18,7 @@
   ],
   "skills": [
     "git-commit",
+    "loop-engineering",
     "make-repo-contribution",
     "ponytail",
     "self-explanatory-code"
@@ -36,7 +37,12 @@
       "extensions": [
         "bookmark",
         "handoff",
-        "harness-manager"
+        "harness-manager",
+        "iterm-bell",
+        "@calesennett/pi-codex-fast",
+        "pi-session-window",
+        "pi-observer",
+        "pi-web-ui"
       ],
       "mcps": [],
       "model": {

@@ -3,6 +3,7 @@
   "description": "为 DeepSeek 走量代码生成提供详细约束、明确步骤与完整验证",
   "skills": [
     "git-commit",
+    "loop-engineering",
     "make-repo-contribution",
     "ponytail",
     "self-explanatory-code"
@@ -10,7 +11,12 @@
   "extensions": [
     "bookmark",
     "handoff",
-    "harness-manager"
+    "harness-manager",
+    "iterm-bell",
+    "@calesennett/pi-codex-fast",
+    "pi-session-window",
+    "pi-observer",
+    "pi-web-ui"
   ],
   "mcps": [],
   "tools": [

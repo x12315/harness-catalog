@@ -6,6 +6,7 @@
 # ─────────────────────────────────────────────────────────────
 /skills/*
 !/skills/agent-harness/
+!/skills/loop-engineering/
 !/skills/amap-house-hunting/
 !/skills/book-translation/
 !/skills/pi-session-review/

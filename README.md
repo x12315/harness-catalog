@@ -31,9 +31,15 @@ codex -p medium
 
 未安装入口时从 Engine 运行 `node scripts/harness.mjs --catalog=/path/to/catalog compose --apply`，再 bootstrap。不同位置用 `--catalog=<path>` 或 `HARNESS_CATALOG`。旧单仓的 `node scripts/...` 不再是本仓维护入口。
 
+本地迁移保留了 `loop-engineering`；`iterm-bell` 的提醒实现已迁入 Engine，并消费 Observer 的会话状态，Catalog 只保留启用声明。三个 Profile 均明确启用它们、`pi-session-window` 和 `@calesennett/pi-codex-fast`（Profile 使用完整包名，包括 scope，不是扩展文件名）。Fast 速度模式继续保留在原生个性化设置，Profile 继承；DeepSeek 不支持 priority。Pi 的已保存模型范围也会继承，范围内不含推荐模型时可能选其他模型；需要特定模型时显式传 `--model`，不要为了修复扩展改动本机范围。会话窗口包暂用 `adapters/pi/settings.json` 中的 `{{HOME}}/Desktop/pi-session-window` 开发绑定；先确保该工作树存在。发布并验收新版本后，将此声明改回固定的 git 版本，再 bootstrap；不要覆盖 Pi 的安装缓存来模拟更新。
+
 普通 Pi 的 `/harness` 是人工管理面；`pi-profile` 在启动边界选择完整工作组合。普通用户默认模型、主题、scope、临时选择仍是本机个性化，显式选择优先于 Profile 推荐。
 
 Web/TUI 修改按实际 diff 增量检查，完整 doctor 独立运行。CAS/锁冲突时刷新后审阅，不手工抢锁；正常失败恢复来源与生成物。删除需准确输入 ID，至少保留一个方案，不删共享资源、认证或会话。改配置后正在运行的 agent 需要 `/reload` 或重新选择 Profile；旧 Web 服务须关闭后重新 `harness web`。
+
+Web 的“安装与管理”可填写本地路径、远端 Git/npm 来源、固定版本和期望位置，生成待核验的 AI 管理任务；页面和复制动作不执行安装，也不授权 agent 实施。先让 agent 展示实际命令、落盘位置、安装/启动代码风险、所有引用与恢复方案，再明确批准。取消引用不等于卸载，卸载受管副本不删除个人源码、认证、会话或本机偏好。官方工具不支持指定位置时须暂停；权限或凭据交给人处理，不绕过。
+
+独立发布的个人扩展和第三方包日常优先使用固定 Git commit/tag 或 npm 版本；本地路径是明确的开发引用，不是发布渠道。切换前必须确认远端包含当前修复，不自动提交或推送。Catalog 内自有 Skills/资源本身由 Catalog Git 管理，按源码归属投影，不复制到安装缓存后再反向引用。
 
 ## 公共仓安全
 

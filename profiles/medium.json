@@ -22,6 +22,7 @@
     "documentation-writer",
     "git-commit",
     "make-repo-contribution",
+    "loop-engineering",
     "ponytail",
     "self-explanatory-code",
     "lark-base",
@@ -44,7 +45,12 @@
       "extensions": [
         "bookmark",
         "handoff",
-        "harness-manager"
+        "harness-manager",
+        "iterm-bell",
+        "@calesennett/pi-codex-fast",
+        "pi-session-window",
+        "pi-observer",
+        "pi-web-ui"
       ],
       "mcps": [],
       "model": {

@@ -1,7 +1,8 @@
 {
   "packages": [
-    "npm:pi-web-ui",
-    "npm:pi-goal-x"
+    "npm:pi-web-ui@0.100.0",
+    "{{HOME}}/Desktop/pi-session-window",
+    "git:github.com/calesennett/pi-codex-fast"
   ],
   "skills": [
     "-{{HOME}}/.pi/agent/skills/profile-config/SKILL.md"
