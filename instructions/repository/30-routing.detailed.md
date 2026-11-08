@@ -5,4 +5,3 @@
 3. 个人 instructions、Skills、Profiles、依赖声明、adapter 设置，读 Catalog README、`profiles/README.md` 与 `skills/agent-harness/SKILL.md`。
 4. 投影、恢复、依赖或本机事实问题，先查看两仓归属和官方运行目录，不把安装或认证状态移入仓库。
 5. schema 的真相源在 Engine，Catalog 内副本由 compose 更新。旧单仓的 `node scripts/...` 不是 Catalog 的维护入口，使用 `harness`。
-6. 调试、构建或部署等待超过预计检查点（未估计则 90 秒），或反复轮询没有新证据时，先读 `skills/loop-engineering/SKILL.md`：收集进程、日志和产物证据，缩短反馈回路，再决定继续、诊断或停止。

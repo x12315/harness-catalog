@@ -1,3 +1,3 @@
-## 仓库硬规则
+## 投影与生成物
 
-投影按归属精确指向 Engine 或 Catalog 仓库；自有 skill 必须白名单入库并使用规范 frontmatter；skill 名称与目录一致且描述写清用途和触发条件；生成物只通过源码与 composer 更新；Profile 推荐模型不覆盖会话显式选择或本机个性化状态。
+投影按归属精确指向声明的 Engine 或 Catalog 仓库，不链到上游安装目录，升级不得静默替换仓库内容。生成物只改来源后 compose，不手改；人工控制面与工作面分离的既有归属见 `repository/10-ownership`，不另加验收门槛。

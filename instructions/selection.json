@@ -6,9 +6,21 @@
     { "id": "repository/00-purpose", "detail": "brief" },
     { "id": "repository/10-ownership", "detail": "standard" },
     { "id": "repository/20-rules", "detail": "standard" },
+    { "id": "repository/21-own-skill-tracking", "detail": "standard" },
+    { "id": "repository/22-skill-metadata", "detail": "standard" },
+    { "id": "repository/23-model-precedence", "detail": "standard" },
+    { "id": "repository/25-engineering-judgment", "detail": "standard" },
     { "id": "repository/30-routing", "detail": "brief" },
+    { "id": "repository/31-feedback-checkpoints", "detail": "brief" },
     { "id": "repository/35-long-task-goals", "detail": "standard" },
+    { "id": "repository/36-goal-scope-continuity", "detail": "standard" },
+    { "id": "repository/37-blocker-handling", "detail": "standard" },
     { "id": "repository/40-validation", "detail": "standard" },
-    { "id": "repository/50-conventions", "detail": "standard" }
+    { "id": "repository/41-performance-validation", "detail": "standard" },
+    { "id": "repository/50-conventions", "detail": "standard" },
+    { "id": "repository/51-preparation", "detail": "standard" },
+    { "id": "repository/52-code-style", "detail": "standard" },
+    { "id": "repository/53-profile-transition", "detail": "standard" },
+    { "id": "repository/54-runtime-refresh", "detail": "standard" }
   ]
 }

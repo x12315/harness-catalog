@@ -1,3 +1,3 @@
-## 改动后的硬验收
+## 改动后的功能验收
 
-工具/接口改动先在 Engine 跑控制面测试；两仓改动完成后 `harness doctor`。发布或检查路径改动，还需按 Engine 性能文档跑 benchmark、比较基线并归档；不可比和验证缺口如实说明。日常保存使用增量检查。
+工具/接口改动先在 Engine 跑 `node scripts/test-control-plane.mjs`；任一仓内容完成后 `harness doctor`，覆盖控制面、两仓接口、生成物、依赖、无密钥、Pi/Codex 发现、adapter、精确投影和 Profile 引用，退出码定结论，缺口如实说明。日常保存只检查受影响项，不重复完整 doctor；保存入口自带的检查与保护不受此开关影响。

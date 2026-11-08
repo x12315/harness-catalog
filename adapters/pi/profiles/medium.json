@@ -4,8 +4,12 @@
   "skills": [
     "agent-browser",
     "amap-house-hunting",
+    "artifact-view",
+    "background-task-notify",
+    "browser-work-mode",
     "documentation-writer",
     "git-commit",
+    "justoneapi-shopping",
     "lark-base",
     "lark-doc",
     "lark-drive",
@@ -17,6 +21,7 @@
     "self-explanatory-code"
   ],
   "extensions": [
+    "file-links",
     "bookmark",
     "handoff",
     "harness-manager",

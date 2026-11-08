@@ -2,13 +2,17 @@
   "label": "重型harness",
   "description": "为 DeepSeek 走量代码生成提供详细约束、明确步骤与完整验证",
   "skills": [
+    "artifact-view",
+    "background-task-notify",
     "git-commit",
+    "justoneapi-shopping",
     "loop-engineering",
     "make-repo-contribution",
     "ponytail",
     "self-explanatory-code"
   ],
   "extensions": [
+    "file-links",
     "bookmark",
     "handoff",
     "harness-manager",

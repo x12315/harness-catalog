@@ -6,11 +6,17 @@
 # ─────────────────────────────────────────────────────────────
 /skills/*
 !/skills/agent-harness/
+!/skills/background-task-notify/
 !/skills/loop-engineering/
 !/skills/amap-house-hunting/
 !/skills/book-translation/
 !/skills/pi-session-review/
 !/skills/self-explanatory-code/
+!/skills/ponytail/
+!/skills/justoneapi-shopping/
+!/skills/usb-kvm/
+!/skills/artifact-view/
+!/skills/browser-work-mode/
 
 # 系统与编辑器噪声
 .DS_Store

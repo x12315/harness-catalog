@@ -1,0 +1,107 @@
+{
+  "$schema": "./profile.schema.json",
+  "label": "肥鱼harness",
+  "description": "面向 DeepSeek Flash 的综合工作方案：中型执行约束，结合超轻的完整技能与子代理能力",
+  "instructions": [
+    {
+      "id": "profile/implementation",
+      "detail": "standard"
+    },
+    {
+      "id": "profile/model-standard",
+      "detail": "standard"
+    },
+    {
+      "id": "profile/concise",
+      "detail": "standard"
+    }
+  ],
+  "skills": [
+    "artifact-view",
+    "background-task-notify",
+    "justoneapi-shopping",
+    "agent-browser",
+    "browser-work-mode",
+    "agent-harness",
+    "amap-house-hunting",
+    "computer-use",
+    "documentation-writer",
+    "frontend-design",
+    "git-commit",
+    "grilling",
+    "lark-approval",
+    "lark-apps",
+    "lark-attendance",
+    "lark-base",
+    "lark-calendar",
+    "lark-contact",
+    "lark-doc",
+    "lark-drive",
+    "lark-event",
+    "lark-im",
+    "lark-mail",
+    "lark-markdown",
+    "lark-meeting",
+    "lark-minutes",
+    "lark-note",
+    "lark-okr",
+    "lark-openapi-explorer",
+    "lark-shared",
+    "lark-sheets",
+    "lark-skill-maker",
+    "lark-slides",
+    "lark-task",
+    "lark-vc",
+    "lark-vc-agent",
+    "lark-whiteboard",
+    "lark-wiki",
+    "lark-workflow-meeting-summary",
+    "lark-workflow-standup-report",
+    "loop-engineering",
+    "macos-design",
+    "make-repo-contribution",
+    "ponytail",
+    "self-explanatory-code",
+    "session-handoff"
+  ],
+  "adapters": {
+    "pi": {
+      "tools": [
+        "read",
+        "bash",
+        "edit",
+        "write",
+        "grep",
+        "find",
+        "ls",
+        "subagent"
+      ],
+      "extensions": [
+        "file-links",
+        "bookmark",
+        "handoff",
+        "harness-manager",
+        "iterm-bell",
+        "@calesennett/pi-codex-fast",
+        "pi-session-window",
+        "subagent",
+        "pi-observer",
+        "pi-web-ui"
+      ],
+      "mcps": [],
+      "model": {
+        "provider": "deepseek",
+        "id": "deepseek-flash",
+        "thinking": "high"
+      }
+    },
+    "codex": {
+      "sandbox": "workspace-write",
+      "approval": "on-request",
+      "model": {
+        "id": "gpt-5.6-terra",
+        "thinking": "medium"
+      }
+    }
+  }
+}

@@ -36,13 +36,14 @@
       "updatedAt": "2026-09-28T07:18:12.277Z"
     },
     "documentation-writer": {
-      "source": "github/awesome-copilot",
+      "source": "x12315/awesome-copilot",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "sourceUrl": "https://github.com/x12315/awesome-copilot.git",
+      "ref": "documentation-writer-reader-first-v1",
       "skillPath": "skills/documentation-writer/SKILL.md",
-      "skillFolderHash": "016d8040a3f91c8360b1003e74fbf29f34c283f5",
+      "skillFolderHash": "a4fa460853894411f4d8e7785ecdf132894a9141",
       "installedAt": "2026-08-25T08:07:55.649Z",
-      "updatedAt": "2026-09-28T07:17:16.834Z"
+      "updatedAt": "2026-10-20T07:44:47.407Z"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -387,15 +388,6 @@
       "skillFolderHash": "b0cd1d58b0c317cf7c3726fef7e6b1197c405246",
       "installedAt": "2026-07-28T15:30:59.350Z",
       "updatedAt": "2026-09-28T07:18:12.281Z"
-    },
-    "ponytail": {
-      "source": "DietrichGebert/ponytail",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/DietrichGebert/ponytail.git",
-      "skillPath": "skills/ponytail/SKILL.md",
-      "skillFolderHash": "cb6e53477eaf04e6daeca22feacb85f9ce20d40c",
-      "installedAt": "2026-06-22T17:56:08.193Z",
-      "updatedAt": "2026-09-28T07:17:00.160Z"
     },
     "session-handoff": {
       "source": "softaworks/agent-toolkit",

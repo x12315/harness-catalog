@@ -1,0 +1,2 @@
+set -eu
+python3 /tmp/ahsb-push/tests/sandbox/browser-work-mode/guest.py

@@ -17,7 +17,11 @@
     }
   ],
   "skills": [
+    "artifact-view",
+    "background-task-notify",
+    "justoneapi-shopping",
     "agent-browser",
+    "browser-work-mode",
     "amap-house-hunting",
     "documentation-writer",
     "git-commit",
@@ -43,6 +47,7 @@
         "ls"
       ],
       "extensions": [
+        "file-links",
         "bookmark",
         "handoff",
         "harness-manager",

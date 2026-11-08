@@ -17,6 +17,9 @@
     }
   ],
   "skills": [
+    "artifact-view",
+    "background-task-notify",
+    "justoneapi-shopping",
     "git-commit",
     "loop-engineering",
     "make-repo-contribution",
@@ -35,6 +38,7 @@
         "ls"
       ],
       "extensions": [
+        "file-links",
         "bookmark",
         "handoff",
         "harness-manager",

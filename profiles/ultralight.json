@@ -4,9 +4,14 @@
   "description": "以 GPT-6 Astra 和最少过程约束处理空间设计、疑难排查与全局规划",
   "instructions": [],
   "skills": [
+    "artifact-view",
+    "background-task-notify",
+    "justoneapi-shopping",
     "agent-browser",
+    "browser-work-mode",
     "agent-harness",
     "computer-use",
+    "usb-kvm",
     "documentation-writer",
     "frontend-design",
     "grilling",
@@ -57,6 +62,7 @@
         "subagent"
       ],
       "extensions": [
+        "file-links",
         "bookmark",
         "handoff",
         "harness-manager",

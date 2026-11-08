@@ -4,10 +4,14 @@
   "skills": [
     "agent-browser",
     "agent-harness",
+    "artifact-view",
+    "background-task-notify",
+    "browser-work-mode",
     "computer-use",
     "documentation-writer",
     "frontend-design",
     "grilling",
+    "justoneapi-shopping",
     "lark-approval",
     "lark-apps",
     "lark-attendance",
@@ -40,9 +44,11 @@
     "macos-design",
     "ponytail",
     "self-explanatory-code",
-    "session-handoff"
+    "session-handoff",
+    "usb-kvm"
   ],
   "extensions": [
+    "file-links",
     "bookmark",
     "handoff",
     "harness-manager",
