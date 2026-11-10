@@ -29,6 +29,9 @@ __pycache__/
 # 依赖产物（适配器若引第三方 npm 依赖时）
 node_modules/
 
+# Disposable sandbox inputs, never source or runtime credentials
+/.artifacts/
+
 # 管理事务的运行产物；崩溃后也不入库
 *.harness.lock
 /instructions/**/*.tmp-*

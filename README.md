@@ -34,7 +34,7 @@ codex -p medium
 
 未安装入口时从 Engine 运行 `node scripts/harness.mjs --catalog=/path/to/catalog compose --apply`，再 bootstrap。不同位置用 `--catalog=<path>` 或 `HARNESS_CATALOG`。旧单仓的 `node scripts/...` 不再是本仓维护入口。
 
-本地迁移保留了 `loop-engineering`；`iterm-bell` 的提醒实现已迁入 Engine，并消费 Observer 的会话状态，Catalog 只保留启用声明。三个 Profile 均明确启用它们、`pi-session-window` 和 `@calesennett/pi-codex-fast`（Profile 使用完整包名，包括 scope，不是扩展文件名）。Fast 速度模式继续保留在原生个性化设置，Profile 继承；DeepSeek 不支持 priority。Pi 的已保存模型范围也会继承，范围内不含推荐模型时可能选其他模型；需要特定模型时显式传 `--model`，不要为了修复扩展改动本机范围。会话窗口包暂用 `adapters/pi/settings.json` 中的 `{{HOME}}/Desktop/pi-session-window` 开发绑定；先确保该工作树存在。发布并验收新版本后，将此声明改回固定的 git 版本，再 bootstrap；不要覆盖 Pi 的安装缓存来模拟更新。
+本地迁移保留了 `loop-engineering`；`iterm-bell` 的提醒实现已迁入 Engine，并消费 Observer 的会话状态，Catalog 只保留启用声明。当前四个 Profile 均明确启用它们、`pi-session-window` 和 `@calesennett/pi-codex-fast`（Profile 使用完整包名，包括 scope，不是扩展文件名）。Fast 速度模式继续保留在原生个性化设置，Profile 继承；DeepSeek 不支持 priority。Pi 的已保存模型范围也会继承，范围内不含推荐模型时可能选其他模型；需要特定模型时显式传 `--model`，不要为了修复扩展改动本机范围。独立插件由 `adapters/pi/settings.json` 固定GitHub提交：会话窗口为 `git:github.com/x12315/pi-session-window@8fef6d472a90d6217603fc42def22d795a3f3967`，Fast为 `git:github.com/calesennett/pi-codex-fast@b2538cbdb4e78efe4388878e6a11599d4f10cf02`；不再依赖Desktop开发树。Git安装缓存仍在本机，必须由Pi包管理器准备，不手抄源码到vendor；已有Desktop源码保留，不自动重载。`pi-web-ui` 保持已知可用的 `npm:pi-web-ui@0.100.0`，不将未核验构建产物的Git树冒充同等安装包。Engine内置扩展继续精确投影到Engine源码，不改成第三方Git包。
 
 Pi 的 `/harness` 是人工管理面；`pi-h` / `harness run pi <id>` 使用本机选择的配套包。直接 PATH `pi`、`pi-profile` 保持原安装，不保证使用同一包。普通用户默认模型、主题、scope、临时选择仍是本机个性化，显式选择优先于 Profile 推荐。
 
@@ -60,7 +60,9 @@ Web 的“安装与管理”可填写本地路径、远端 Git/npm 来源、固�
 
 `skills/browser-work-mode/SKILL.md` 是项目无关的自有配套规范，与第三方 `agent-browser` 一起使用；当前启用浏览器的 `medium`、`ultralight`、`feiyu` 同时声明两者，未给 `heavy` 新增浏览器能力。明确要共同查看/接手则选可见协作，独立查询、抓取、测试默认后台；能合理推断就自行选择，有实质歧义才简短询问。用户明确选择优先，已有模式只沿用同一任务，不变成永久偏好。
 
-两种模式隔离会话与页面控制。当前CLI与配套core明确提供原生 `--work-mode` 时优先调用工具的sticky会话与冲突保护；旧CLI只在新建独立会话时兼容 `--headed true/false`，不冒称具备原生保护，也不自动安装fork或迁移活跃daemon。Skill只处理意图与协作规则，不再实现一套会话工具，不改第三方安装Skill。协作需确认用户实际能看见并操作，交接后重新读取页面；后台不占协作窗口，不静默附着个人浏览器、不迁移认证或重启有未保存/未知提交的会话。浏览器headless不等于任务可脱离agent长期运行，跨轮通知另走已有后台设施。细节与校准情形见该Skill及其 `evals.md`；内容规则不构成工具硬强制或真实浏览器行为验收。运行中的agent需 `/reload` 或重新选择Profile加载，不自动刷新。
+原生CLI从 [个人fork固定提交](https://github.com/x12315/agent-browser/tree/887bb8bc4f44e85f292b7d27c845fb56fe19751a) 和 [固定GitHub Release](https://github.com/x12315/agent-browser/releases/tag/x12315-work-mode-0.39.1-r1) 引入，资产校验及并行安装见该提交的 `docs/work-mode-distribution.md`；不是把Rust仓库伪装成Pi插件。实际安装目录是本机缓存，不替代GitHub来源身份。
+
+两种模式隔离会话与页面控制。新任务发现并行入口 `agent-browser-work-mode` 时优先选择它，并通过同一入口读取配套core、执行后续操作；已有任务仍使用先前确认的原CLI，不因安装新版自动迁移。普通 `agent-browser` 与既有会话不被替换。当前CLI与配套core明确提供原生 `--work-mode` 时优先调用工具的sticky会话与冲突保护；旧CLI只在新建独立会话时兼容 `--headed true/false`，不冒称具备原生保护，也不自动安装fork或迁移活跃daemon。Skill只处理意图与协作规则，不再实现一套会话工具，不改第三方安装Skill。协作需确认用户实际能看见并操作，交接后重新读取页面；后台不占协作窗口，不静默附着个人浏览器、不迁移认证或重启有未保存/未知提交的会话。浏览器headless不等于任务可脱离agent长期运行，跨轮通知另走已有后台设施。细节与校准情形见该Skill及其 `evals.md`；内容规则不构成工具硬强制或真实浏览器行为验收。运行中的agent需 `/reload` 或重新选择Profile加载，不自动刷新。
 
 ## 本地产物链接
 

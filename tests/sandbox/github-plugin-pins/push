@@ -1,0 +1,4 @@
+tests/sandbox/github-plugin-pins/guest.py:/tmp/ahsb-push/tests/sandbox/github-plugin-pins/guest.py
+tests/sandbox/github-plugin-pins/install-only.mjs:/tmp/ahsb-push/tests/sandbox/github-plugin-pins/install-only.mjs
+tests/sandbox/github-plugin-pins/pins.json:/tmp/ahsb-push/tests/sandbox/github-plugin-pins/pins.json
+.artifacts/github-plugin-pins/pi-sdk-runtime.tar.gz:/tmp/ahsb-push/pi-sdk-runtime.tar.gz

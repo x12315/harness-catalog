@@ -1,0 +1,26 @@
+[
+  {
+    "name": "pi-session-window",
+    "source": "git:github.com/x12315/pi-session-window@8fef6d472a90d6217603fc42def22d795a3f3967",
+    "head": "8fef6d472a90d6217603fc42def22d795a3f3967",
+    "entry": "extensions/session-window.ts",
+    "contentSetSha256": "cd5280a0b5362c7b35de617ebbce9389cfd97a09142d9e0745c1155fde5e38aa",
+    "files": {
+      "extensions/session-snapshot.mjs": "da9f959f8067a4ca3943f911deef57fe704547c241efaafd0058038b824ef840",
+      "extensions/session-window.ts": "409048a261fcacb52e1174d0a21a3994e20fb330464f244f201be87bfee223bd",
+      "extensions/window-launcher.mjs": "8c05f73f3d34984bc5201722e33b4c7a8dbdb70acb0848b14f39682c634d8f0a",
+      "package.json": "d0f6f91f7e67ffc7f500e4b32d9696abf54371ab4e5de19f936599d91b18ed66"
+    }
+  },
+  {
+    "name": "@calesennett/pi-codex-fast",
+    "source": "git:github.com/calesennett/pi-codex-fast@b2538cbdb4e78efe4388878e6a11599d4f10cf02",
+    "head": "b2538cbdb4e78efe4388878e6a11599d4f10cf02",
+    "entry": "extensions/codex-fast.ts",
+    "contentSetSha256": "146fd5e5a46c0c272dfe772377d5c6734a6cc82bf8bfb903855077c80108a4f0",
+    "files": {
+      "extensions/codex-fast.ts": "5f8edc4eb634a1d24a8b1bb0dc3d23301b8aeb17b8a2a1455d9dab399beb6e90",
+      "package.json": "a3268efe2ec76b4683283581601e42e5cb158a4e5eef236557e9d2b14abfba5a"
+    }
+  }
+]

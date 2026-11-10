@@ -8,7 +8,11 @@ metadata:
 
 # 浏览器工作模式
 
-本 Skill 决定如何与人配合；工具执行、支持限制与切换保护以所用 `agent-browser skills get core` 的配套内容为准，避免在此再造会话管理器。使用前同时读 `agent-browser` Skill 并运行其要求的 core发现；具体参数以当前实际安装的CLI为准，不凭fork源码、版本号或一次文档更新假定能力已部署。不绑定某个项目、网站、端口或会话名，不修改第三方安装内容。
+本 Skill 决定如何与人配合；工具执行、支持限制与切换保护以实际所选CLI的 `skills get core` 配套内容为准，避免在此再造会话管理器。使用前同时读 `agent-browser` Skill；先选定入口，再用同一入口发现core和执行命令，不混用新旧二进制。具体参数以当前实际安装的CLI为准，不凭fork源码、版本号或一次文档更新假定能力已部署。不绑定某个项目、网站、端口或会话名，不修改第三方安装内容。
+
+**新任务的入口选择**：若存在并行安装的 `agent-browser-work-mode`，优先使用它；否则使用原 `agent-browser`。例如 `BROWSER_CLI="$(command -v agent-browser-work-mode || command -v agent-browser)"`，随后执行 `"$BROWSER_CLI" skills get core`，并将配套core示例中的 `agent-browser` 统一替换为该实际入口。记录所选绝对路径并在同一任务中沿用。**已有任务**先沿用先前确认的原CLI路径，不重新自动选择，也不因安装新版就迁移daemon。并行入口只是一条指向原生可执行文件的软链，不是另一套浏览器包装器；普通 `agent-browser` 保持原安装。
+
+原生工作模式的固定GitHub来源为 [x12315/agent-browser@887bb8bc4f44e85f292b7d27c845fb56fe19751a](https://github.com/x12315/agent-browser/tree/887bb8bc4f44e85f292b7d27c845fb56fe19751a)，安装资产见 [x12315-work-mode-0.39.1-r1](https://github.com/x12315/agent-browser/releases/tag/x12315-work-mode-0.39.1-r1) 和该提交的 `docs/work-mode-distribution.md`。macOS ARM64 bundle SHA256为 `e8d179f0f0ccc3bffa2d0b40b55845b84b8fcf486c84877479689123e1f7674e`。这是CLI与匹配core的分发，不是Pi扩展；不要把Rust仓库塞进Pi packages，也不要用其默认npm postinstall或自动upgrade代替fork安装。已安装缓存位于本机是正常现象，来源、固定提交与资产hash必须可追溯；不凭链接或版本号自行升级。
 
 ## 先决定模式，不先开窗口
 
@@ -42,8 +46,8 @@ metadata:
 
 ```bash
 # 两个不同会话；按本次选定模式只执行其中一种，不同时启动。
-agent-browser --session "$COLLAB_SESSION" --work-mode collaboration open "$URL"
-agent-browser --session "$BACKGROUND_SESSION" --work-mode background open "$URL"
+"$BROWSER_CLI" --session "$COLLAB_SESSION" --work-mode collaboration open "$URL"
+"$BROWSER_CLI" --session "$BACKGROUND_SESSION" --work-mode background open "$URL"
 ```
 
 后续可省略模式，由工具沿用会话策略；用原生session info/lifecycle核对 `workMode` 与 `effectiveMode`。支持该协议的工具会先核验daemon的 `workModePolicyVersion: 1`，版本字符串相同不等于能力相同；不要在Skill里重复实现这套握手。工具拒绝不兼容复用、附着或重启时，先核对现场，不通过去掉模式、换低层入口或擅自close来绕过。原生接口的外部浏览器、引擎、插件及chat等支持边界以该二进制配套说明为准。语义选择由agent负责，工具不自动猜用户意图，也不证明人确实能看见屏幕。
